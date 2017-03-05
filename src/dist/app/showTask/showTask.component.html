@@ -1,0 +1,33 @@
+
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Date</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Priority</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let todo of toDoList; let i = index">
+      <td>{{todo._id}}</td>
+      <td>{{todo.date}}</td>
+      <td>{{todo.title}}</td>
+      <td>{{todo.description}}</td>
+      <td>{{todo.priority}}</td>
+      <form>
+        <button type="submit" class="btn btn-info" (click)="editToDo(i)">Edit</button>
+        <button type="submit" class="btn btn-danger" (click)="deleteToDo(i)">Delete</button>
+      </form>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+
